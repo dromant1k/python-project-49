@@ -25,7 +25,7 @@ Let's try again, {name}""")
 Let's try again, {name}""")
             index = 0
         else:
-            print(f"Correct!")
+            print("Correct!")
             index += 1
     print(f"Congratulations, {name}!")
 
