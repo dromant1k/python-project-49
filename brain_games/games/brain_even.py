@@ -1,4 +1,4 @@
-from brain_games.scripts.brain_main import brain_main
+from brain_games.brain_main import brain_main
 import prompt
 import random
 
