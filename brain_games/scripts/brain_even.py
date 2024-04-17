@@ -1,14 +1,12 @@
+from brain_games.scripts.brain_main import brain_main
 import prompt
 import random
 
 
-def greet():
-    print("Welcome to the Brain Games!")
+name = brain_main()
 
 
 def brain_even():
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}!")
     print('Answer "yes" if the number is even, otherwise answer "no".')
     index = 0
     winscore = 3
@@ -29,11 +27,8 @@ Let's try again, {name}""")
             index += 1
     print(f"Congratulations, {name}!")
 
-
 def main():
-    greet()
     brain_even()
-
 
 if __name__ == '__main__':
     main()
