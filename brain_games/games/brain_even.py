@@ -3,10 +3,8 @@ import prompt
 import random
 
 
-name = brain_main()
-
-
 def brain_even():
+    name = brain_main()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     index = 0
     winscore = 3

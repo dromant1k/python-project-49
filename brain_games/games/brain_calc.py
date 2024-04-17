@@ -5,10 +5,8 @@ import prompt
 import operator
 
 
-name = brain_main()
-
-
 def brain_calc():
+    name = brain_main()
     print("What is the result of the expression?")
     index = 0
     winscore = 3
