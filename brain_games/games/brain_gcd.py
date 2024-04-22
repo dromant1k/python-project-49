@@ -23,7 +23,8 @@ def brain_gcd():
             print('Correct!')
             user_score += 1
         if answer != result:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.")
+            print(f"'{answer}' is wrong answer ;(." +
+                  f" Correct answer was '{result}'.")
             print(f"Let's try again, {name}!")
             break
         if user_score == 3:

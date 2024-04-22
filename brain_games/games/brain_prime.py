@@ -19,18 +19,20 @@ def brain_prime():
                 simple = False
             i += 1
         answer = prompt.string("You answer: ")
-        if simple == True and answer == 'yes':
+        if simple and answer == 'yes':
             print("Correct!")
             user_score += 1
-        if simple == False and answer == 'no':
+        if simple is False and answer == 'no':
             print("Correct!")
             user_score += 1
-        if simple == True and answer != 'yes':
-            print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.")
+        if simple and answer != 'yes':
+            print(f"'{answer}' is wrong answer ;(." +
+                  f" Correct answer was 'yes'.")
             print(f"Let's try again, {name}!")
             break
-        if simple == False and answer != 'no':
-            print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.")
+        if simple is False and answer != 'no':
+            print(f"'{answer}' is wrong answer ;(." +
+                  f" Correct answer was 'no'.")
             print(f"Let's try again, {name}!")
             break
         if user_score == 3:

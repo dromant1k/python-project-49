@@ -2,7 +2,6 @@ import random
 from random import randint
 from brain_games.brain_main import brain_main
 import prompt
-import operator
 
 
 def brain_calc():
@@ -24,13 +23,17 @@ def brain_calc():
         if '*' == random_operator:
             result = str(first_number * second_number)
         answer = prompt.string("You answer: ")
+
         if answer == result:
             print('Correct!')
             user_score += 1
+
         if answer != result:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.")
+            print(f"'{answer}' is wrong answer ;(." +
+                  f" Correct answer was '{result}'.")
             print(f"Let's try again, {name}!")
             break
+
         if user_score == 3:
             print(f"Congratulations, {name}!")
 
