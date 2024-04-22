@@ -1,7 +1,6 @@
 from brain_games.brain_main import brain_main
 from random import randint
 import prompt
-from math import sqrt
 
 
 def is_prime(number):
@@ -23,7 +22,8 @@ def brain_prime():
         is_simple = is_prime(number)
         print(f"Question: {number}")
         answer = prompt.string("You answer: ")
-        if (is_simple and answer == 'yes') or (not is_simple and answer == 'no'):
+        if (is_simple and answer == 'yes') \
+            or (not is_simple and answer == 'no'):
             print("Correct!")
             user_score += 1
         else:
