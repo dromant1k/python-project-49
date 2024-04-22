@@ -5,7 +5,7 @@ import prompt
 
 def brain_gcd():
     name = brain_main()
-    print("Find the greatest common divisior of given numbers.")
+    print("Find the greatest common divisor of given numbers.")
     user_score = 0
     winscore = 3
     while user_score < winscore:
