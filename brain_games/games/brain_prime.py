@@ -4,6 +4,15 @@ import prompt
 from math import sqrt
 
 
+def is_prime(number):
+    if number < 2:
+        return False
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+
+
 def brain_prime():
     name = brain_main()
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
@@ -11,30 +20,18 @@ def brain_prime():
     winscore = 3
     while user_score < winscore:
         number = randint(1, 100)
-        simple = True
-        i = 2
+        is_simple = is_prime(number)
         print(f"Question: {number}")
-        while i <= sqrt(number):
-            if number % i == 0:
-                simple = False
-            i += 1
         answer = prompt.string("You answer: ")
-        if simple and answer == 'yes':
+        if (is_simple and answer == 'yes') or (not is_simple and answer == 'no'):
             print("Correct!")
             user_score += 1
-        if simple is False and answer == 'no':
-            print("Correct!")
-            user_score += 1
-        if simple and answer != 'yes':
+        else:
             print(f"'{answer}' is wrong answer ;(."
-                  + " Correct answer was 'yes'.")
+                  + f" Correct answer was '{'yes' if is_simple else 'no'}'.")
             print(f"Let's try again, {name}!")
             break
-        if simple is False and answer != 'no':
-            print(f"'{answer}' is wrong answer ;(."
-                  + " Correct answer was 'no'.")
-            print(f"Let's try again, {name}!")
-            break
+
         if user_score == 3:
             print(f"Congratulations, {name}!")
 
