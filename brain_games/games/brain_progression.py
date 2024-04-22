@@ -19,7 +19,11 @@ def brain_progression():
         result = one_random_number
         index = ten_random_numbers.index(result)
         ten_random_numbers[index] = '..'
-        print(f"Question: {ten_random_numbers}")
+        question = ''
+        for el in ten_random_numbers:
+            question += str(el)
+            question += ' '
+        print(f"Question: {question}")
         answer = prompt.integer("You answer: ")
         if answer == result:
             print('Correct!')
