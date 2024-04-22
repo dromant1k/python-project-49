@@ -26,8 +26,10 @@ def brain_even():
         if user_score == 3:
             print(f"Congratulations, {name}!")
 
+
 def main():
     brain_even()
+
 
 if __name__ == '__main__':
     main()
