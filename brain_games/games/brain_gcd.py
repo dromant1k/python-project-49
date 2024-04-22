@@ -6,9 +6,9 @@ import prompt
 def brain_gcd():
     name = brain_main()
     print("Find the greatest common divisior of given numbers.")
-    index = 0
+    user_score = 0
     winscore = 3
-    while index < winscore:
+    while user_score < winscore:
         a = randrange(1, 100)
         b = randrange(1, 100)
         print(f"Question: {a} {b}")
@@ -21,13 +21,16 @@ def brain_gcd():
         answer = prompt.integer("You answer: ")
         if answer == result:
             print('Correct!')
-            index = index + 1
+            user_score += 1
         if answer != result:
             print(f"""'{answer}' is wrong answer ;(. Correct answer was '{result}'
 Let's try again, {name}!""")
-            index = 0
-    print(f"Congratulations, {name}!")
-
+            user_score = 0
+            break
+        if user_score == 0:
+            print(f"Let's try again, {name}")
+        if user_score == 3:
+            print(f"Congratulations, {name}!")
 
 def main():
     brain_gcd()

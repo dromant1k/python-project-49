@@ -6,24 +6,29 @@ import random
 def brain_even():
     name = brain_main()
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    index = 0
+    user_score = 0
     winscore = 3
-    while index < winscore:
+    while user_score < winscore:
         number = random.randint(1, 100)
         print(f"Question: {number}")
         answer = prompt.string("You answer: ")
         if number % 2 == 0 and answer != 'yes':
             print(f"""'{answer}' is wrong answer ;(. Correct answer was 'yes'.
 Let's try again, {name}""")
-            index = 0
-        elif number % 2 != 0 and answer != 'no':
+            user_score = 0
+            break
+        if number % 2 != 0 and answer != 'no':
             print(f"""'{answer}' is wrong answer ;(. Correct answer was 'no'.
 Let's try again, {name}""")
-            index = 0
+            user_score = 0
+            break
         else:
             print("Correct!")
-            index += 1
-    print(f"Congratulations, {name}!")
+            user_score += 1
+        if user_score == 0:
+            print(f"Let's try again, {name}!")
+        if user_score == 3:
+            print(f"Congratulations, {name}!")
 
 def main():
     brain_even()

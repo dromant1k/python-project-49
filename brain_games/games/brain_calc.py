@@ -8,9 +8,9 @@ import operator
 def brain_calc():
     name = brain_main()
     print("What is the result of the expression?")
-    index = 0
+    user_score = 0
     winscore = 3
-    while index < winscore:
+    while user_score < winscore:
         first_number = randint(1, 10)
         second_number = randint(1, 10)
         operator = ['+', '-', '*']
@@ -26,12 +26,16 @@ def brain_calc():
         answer = prompt.string("You answer: ")
         if answer == result:
             print('Correct!')
-            index = index + 1
+            user_score += 1
         if answer != result:
             print(f"""'{answer}' is wrong answer ;(. Correct answer was '{result}'
 Let's try again, {name}!""")
-            index = 0
-    print(f"Congratulations, {name}!")
+            user_score = 0
+            break
+        if user_score == 0:
+            print(f"Let's try again, {name}")
+        if user_score == 3:
+            print(f"Congratulations, {name}!")
 
 
 def main():
