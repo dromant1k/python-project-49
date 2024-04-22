@@ -26,17 +26,13 @@ def brain_prime():
             print("Correct!")
             user_score += 1
         if simple == True and answer != 'yes':
-            print(f"""'{answer}' is wrong answer ;(. Correct answer was 'yes'
-Let's try again, {name}!""")
-            user_score = 0
+            print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.")
+            print(f"Let's try again, {name}!")
             break
         if simple == False and answer != 'no':
-            print(f"""'{answer}' is wrong answer ;(. Correct answer was 'no'
-Let's try again, {name}!""")
-            user_score = 0
+            print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.")
+            print(f"Let's try again, {name}!")
             break
-        if user_score == 0:
-            print(f"Let's try again, {name}")
         if user_score == 3:
             print(f"Congratulations, {name}!")
 

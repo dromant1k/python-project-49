@@ -25,12 +25,9 @@ def brain_progression():
             print('Correct!')
             user_score += 1
         if answer != result:
-            print(f"""'{answer}' is wrong answer ;(. Correct answer was '{result}'
-Let's try again, {name}!""")
-            user_score = 0
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.")
+            print(f"Let's try again, {name}!")
             break
-        if user_score == 0:
-            print(f"Let's try again, {name}")
         if user_score == 3:
             print(f"Congratulations, {name}!")
 

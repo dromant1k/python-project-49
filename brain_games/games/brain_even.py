@@ -13,20 +13,16 @@ def brain_even():
         print(f"Question: {number}")
         answer = prompt.string("You answer: ")
         if number % 2 == 0 and answer != 'yes':
-            print(f"""'{answer}' is wrong answer ;(. Correct answer was 'yes'.
-Let's try again, {name}""")
-            user_score = 0
+            print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.")
+            print(f"Let's try again, {name}!")
             break
         if number % 2 != 0 and answer != 'no':
-            print(f"""'{answer}' is wrong answer ;(. Correct answer was 'no'.
-Let's try again, {name}""")
-            user_score = 0
+            print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.")
+            print(f"Let's try again, {name}!")
             break
         else:
             print("Correct!")
             user_score += 1
-        if user_score == 0:
-            print(f"Let's try again, {name}!")
         if user_score == 3:
             print(f"Congratulations, {name}!")
 
