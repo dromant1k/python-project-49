@@ -23,7 +23,7 @@ def brain_prime():
         print(f"Question: {number}")
         answer = prompt.string("You answer: ")
         if (is_simple and answer == 'yes') \
-            or (not is_simple and answer == 'no'):
+                or (not is_simple and answer == 'no'):
             print("Correct!")
             user_score += 1
         else:
