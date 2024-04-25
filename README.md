@@ -2,7 +2,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/dromant1k/python-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/dromant1k/python-project-49/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/af94026067050bb27d8a/maintainability)](https://codeclimate.com/github/dromant1k/python-project-49/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/af94026067050bb27d8a/test_coverage)](https://codeclimate.com/github/dromant1k/python-project-49/test_coverage)
 
 This project contains five games. A question is asked, after which the player needs to answer correctly three times in a row. If the player answers all the questions correctly, then he is congratulated on completing the game. If the player answers incorrectly, the game ends and offers to try to play again.
 
